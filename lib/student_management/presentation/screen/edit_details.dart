@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:get/get_utils/src/extensions/widget_extensions.dart';
 
 import '../../../custom_Text_Feild.dart';
 
-class AddStudent extends StatelessWidget {
-  const AddStudent({super.key});
+class EditDetails extends StatelessWidget {
+  const EditDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Add Student")),
+      appBar: AppBar(
+        title: Text("Edit Detail"),
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         spacing: 10,
@@ -29,17 +31,18 @@ class AddStudent extends StatelessWidget {
             onPressed: () {},
             style: ElevatedButton.styleFrom(
               shape: ContinuousRectangleBorder(
-                borderRadius: BorderRadiusGeometry.circular(12)
+                  borderRadius: BorderRadiusGeometry.circular(12)
               ),
               backgroundColor: Colors.blue,
               foregroundColor: Colors.white,
             ),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [Icon(Icons.save), Text("Save Student")]),
+                children: [Icon(Icons.save), Text("Update Detail")]),
           ),
         ],
       ).paddingSymmetric(horizontal: 20),
+
     );
   }
 }

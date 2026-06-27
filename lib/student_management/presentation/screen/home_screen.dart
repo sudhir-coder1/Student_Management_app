@@ -52,7 +52,9 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                       Spacer(),
-                      IconButton(onPressed: () {}, icon: Icon(Icons.edit)),
+                      IconButton(onPressed: () {
+                        Get.toNamed(Routes.edit);
+                      }, icon: Icon(Icons.edit)),
                       IconButton(onPressed: () {}, icon: Icon(Icons.delete)),
                     ],
                   ),
